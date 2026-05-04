@@ -1,0 +1,123 @@
+% !TEX program = xelatex
+% !BIB program = biber
+\documentclass{cugthesis}
+
+% 论文基本信息。日期按规范使用汉字，不用阿拉伯数字。
+\CUGstudentid{2020123456}
+\CUGtitle{中国地质大学（武汉）学士学位论文模板示例}
+\CUGauthor{张三}
+\CUGmajor{地质学}
+\CUGsupervisor{李四}{教授}
+% 如有经正式批准、备案的副导师或企业导师，取消下一行注释；否则保留为空。
+% \CUGcosupervisor{王五}{高级工程师}
+\CUGcollege{地球科学学院}
+\CUGdate{二〇二六年五月}
+% 如需把现有封面图片作为背景，取消下一行注释。该图片只作为底图，文字仍由模板生成。
+% \CUGcoverimage{论文封面模板.jpg}
+\addbibresource{references.bib}
+
+\begin{document}
+
+% 规范要求顺序：中文封面、原创性声明、中文摘要、Abstract、目录、图表清单、正文、致谢、参考文献、附录。
+\makeCUGcover
+\makeCUGoriginality
+
+\CUGfrontmatter
+
+\begin{CUGabstract}
+中文摘要是论文内容的简要陈述，应具有独立性和完整性，一般以第三人称语气写成，不加评论和补充解释。摘要一般说明研究目的、研究方法、研究成果和结论，突出论文的创造性成果。摘要中不应出现图、表、化学方程式、非公知公用的符号和术语。
+
+本模板按《中国地质大学（武汉）学士学位论文写作规范》和附件示例设置页面、标题、摘要、目录、图表、公式、页眉页码、参考文献、致谢和附录等格式。实际写作时请将本段替换为你的论文摘要，中文摘要篇幅通常以一页为宜。
+
+\CUGkeywords{学士学位论文；LaTeX 模板；写作规范；中国地质大学（武汉）}
+\end{CUGabstract}
+
+\begin{CUGabstractEN}
+The abstract is a concise and self-contained statement of the thesis. It should describe the purpose, methods, results, and conclusions of the research. The English abstract should correspond to the Chinese abstract and normally contain no fewer than 300 English words according to the writing specification.
+
+This file demonstrates the structure and formatting commands of the bachelor thesis template for China University of Geosciences (Wuhan). Replace this sample text with your own abstract when writing the thesis.
+
+\CUGkeywordsEN{bachelor thesis; LaTeX template; writing specification; China University of Geosciences (Wuhan)}
+\end{CUGabstractEN}
+
+\makeCUGtoc
+
+% 图清单和表清单是非必要项。论文中图表较多时保留；否则注释掉。
+\makeCUGlof
+\makeCUGlot
+
+\CUGmainmatter
+
+\chapter{绪论}
+
+\section{研究背景}
+
+第一章通常为引言或绪论，包括研究的目的和意义、问题的提出、选题的背景、文献综述、研究方法和论文结构安排等。正文使用宋体小四号，英文使用 Times New Roman 小四号，两端对齐，首行缩进两个汉字符，固定值行距 20 磅。
+
+论文中的引用标注应全文统一。顺序编码制示例如文献\upcite{gbt7713}所示；如采用著者-出版年制，请按学院要求更换参考文献样式并保持全文一致。本模板还示例引用标准文献\upcite{gbt7714}、图书\upcite{bookdemo}和期刊论文\upcite{articledemo}。
+
+\section{研究内容}
+
+图、表应随文编排，先见文字后见图表。自制图表应说明资料和数据来源；引用图表应注明出处。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\rule{0pt}{4cm}\rule{0.8\textwidth}{0pt}}
+  \caption{示意图标题}
+  \label{fig:demo}
+\end{figure}
+
+图\ref{fig:demo}为示例图。图序号和图题目置于图下方，宋体五号居中，图序号与图题目之间空一个汉字符宽度。
+
+\begin{table}[htbp]
+  \centering
+  \caption{示例三线表}
+  \label{tab:demo}
+  \begin{tabular}{ccc}
+    \toprule
+    项目 & 均值（m） & 标准差（m） \\
+    \midrule
+    样本一 & 0.000024 & 0.000013 \\
+    样本二 & 0.000049 & 0.000018 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+表\ref{tab:demo}为示例表。表序号和表题目置于表上方，建议采用国际通用的三线表。
+
+\subsection{表达式示例}
+
+表达式需另行起排，并与周围文字留足够空间。表达式较多时可分章编号，例如式\eqref{eq:demo}。
+
+\begin{equation}
+  E = mc^2
+  \label{eq:demo}
+\end{equation}
+
+量的符号一般采用斜体，单位符号采用正体，单位符号与数值之间留适当间隙，例如 $10\ \mathrm{m}$。
+
+\chapter{研究方法}
+
+\section{资料来源}
+
+本章用于展示章、节标题格式。各章标题居中，黑体三号加粗，章序号与章题目之间空一个汉字符；一级节标题居中，黑体四号加粗；二级节标题居左，黑体小四号。
+
+\section{技术路线}
+
+请根据论文内容继续撰写。多层次标题使用阿拉伯数字连续编号，末位数字后不加点号。
+
+\chapter{结论}
+
+结论是学位论文最终和总体的结论，应明确、精练、完整、准确，不应是正文中各段小结的简单重复。结论应包括论文的核心观点，阐述作者的创造性工作及研究成果的地位、作用和意义，交代研究工作的局限，并提出未来工作的意见或建议。
+
+\begin{CUGacknowledgements}
+致谢应以诚恳、恰当、简短的文字感谢对论文形成作出贡献的组织或个人，包括资助研究工作的基金、合同单位、提供便利条件的组织或个人、提出建议和提供帮助的人等。
+\end{CUGacknowledgements}
+
+\makeCUGbibliography
+
+\CUGappendix
+
+附录用于放置编入正文会损害编排条理性、逻辑性或有碍文章结构紧凑性的材料。若论文没有附录，可删除本页及目录中对应项。
+
+\end{document}
